@@ -1,0 +1,84 @@
+/* CSS CUSTOM PROPERTIES -------------------------------------------------------------------------------- */
+:root {
+  --clr-green: hsl(75, 94%, 57%);
+
+  --clr-white: hsl(0, 0%, 100%);
+  
+  --clr-grey-700: hsl(0, 0%, 20%);
+  --clr-grey-800: hsl(0, 0%, 12%);
+  --clr-grey-900: hsl(0, 0%, 8%);
+
+  --spacing-300: 24px;
+  --spacing-150: 12px;
+  --spacing-100: 8px;
+  --spacing-50: 4px;
+}
+
+/* CSS RESET  -------------------------------------------------------------------------------- */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap:stable;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+
+.attribution { font-size: 11px; text-align: center; margin-top: var(--spacing-150); }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.inter {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.weight-400 {
+  font-weight: 400;
+}
+
+.weight-600 {
+  font-weight: 600;
+}
+
+.weight-700 {
+  font-weight: 700;
+}
+
+body {
+  background-color: var(--clr-grey-900);
+  min-height: 100vh;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  background-color: var(--clr-grey-800);
+}
