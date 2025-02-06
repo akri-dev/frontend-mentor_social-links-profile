@@ -78,7 +78,20 @@ body {
   display: flex; 
   justify-content: center;
   align-items: center;
+  color: var(--clr-white);
+  min-width: 320px;
 }
 .card {
   background-color: var(--clr-grey-800);
+  width: calc(315px + (50 * ((100vw - 320px) / (1440 - 320))));; 
+  /* Desktop 365px Mobile 315px */
+  height: calc(560px + (10 * ((100vw - 320px) / (1440 - 320))));; 
+}
+
+.img-canvas {
+  background-image: url('../images/avatar-alec.JPG');
+  width: 85px;
+  height: 85px;
+  background-size: cover;
+  border-radius: 100%;
 }
