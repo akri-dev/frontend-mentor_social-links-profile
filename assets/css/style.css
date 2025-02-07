@@ -1,17 +1,17 @@
 /* CSS CUSTOM PROPERTIES -------------------------------------------------------------------------------- */
 :root {
   --clr-green: hsl(75, 94%, 57%);
-
+  --clr-gold: #FFBD59;
   --clr-white: hsl(0, 0%, 100%);
   
   --clr-grey-700: hsl(0, 0%, 20%);
   --clr-grey-800: hsl(0, 0%, 12%);
   --clr-grey-900: hsl(0, 0%, 8%);
 
-  --spacing-300: 24px;
-  --spacing-150: 12px;
-  --spacing-100: 8px;
-  --spacing-50: 4px;
+  --vertical-padding: 12px;
+  --top-margin-1: 24px;
+  --top-margin-2: 20px;
+  --top-margin-3: 12px;
 }
 
 /* CSS RESET  -------------------------------------------------------------------------------- */
@@ -51,8 +51,8 @@
     text-wrap: balance;
   }
 
-.attribution { font-size: 11px; text-align: center; margin-top: var(--spacing-150); }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { font-size: 11px; text-align: center; margin-top: var(--top-margin-3); }
+.attribution a { color: var(--clr-gold); }
 
 .inter {
   font-family: "Inter", serif;
@@ -83,9 +83,11 @@ body {
 }
 .card {
   background-color: var(--clr-grey-800);
-  width: calc(315px + (50 * ((100vw - 320px) / (1440 - 320))));; 
+  width: calc(315px + (50 * ((100vw - 320px) / (1440 - 320)))); 
   /* Desktop 365px Mobile 315px */
-  height: calc(560px + (10 * ((100vw - 320px) / (1440 - 320))));; 
+  height: calc(560px + (10 * ((100vw - 320px) / (1440 - 320)))); 
+  border-radius: 10px;
+  padding: 40px;
 }
 
 .img-canvas {
@@ -94,4 +96,81 @@ body {
   height: 85px;
   background-size: cover;
   border-radius: 100%;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-description {
+  margin-top: var(--top-margin-1);
+}
+
+.profile-description > * {
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+h2 {
+  font-size: .8rem;
+  color: var(--clr-gold);
+}
+
+p {
+  font-size: .8rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.profile-description p {
+  margin-top: var(--top-margin-1)
+}
+
+
+.profile-links-group {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: var(--top-margin-2);
+}
+
+.profile-link {
+  background-color: var(--clr-grey-700);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: var(--vertical-padding) 0;
+  border-radius: 7px;
+}
+
+.profile-link:nth-child(1) {
+  margin-top: 0;
+}
+
+.profile-link {
+  font-size: .8rem;
+  text-align: center;
+  margin-top: var(--top-margin-3);
+}
+
+.profile-link {
+  display: block;
+}
+
+.profile-link:hover,
+.profile-link:hover > *,
+.profile-link:focus,
+.profile-link:focus > * {
+  background-color: var(--clr-gold);
+  color: var(--clr-grey-900);
 }
