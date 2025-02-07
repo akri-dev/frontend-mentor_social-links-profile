@@ -168,9 +168,9 @@ a {
 }
 
 .profile-link:hover,
-.profile-link:hover > *,
+.profile-link:hover,
 .profile-link:focus,
-.profile-link:focus > * {
+.profile-link:focus {
   background-color: var(--clr-gold);
   color: var(--clr-grey-900);
 }
